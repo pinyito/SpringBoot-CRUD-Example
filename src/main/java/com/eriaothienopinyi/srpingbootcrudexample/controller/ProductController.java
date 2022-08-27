@@ -10,8 +10,12 @@ import java.util.List;
 @RestController
 @RequestMapping("/products")
 public class ProductController {
-    @Autowired
+
     private ProductService productService;
+    @Autowired
+    public void setProductService(ProductService productService){
+        this.productService = productService;
+    }
 
     //Create the Endpoints
 /*
